@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -6,51 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Detailer Studio | Auto Detailing Varvarin</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2e0e6cfd4.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Detailer Studio</h1>
+      <ul class="nav-links">
+        <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#galerija">Galerija</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <header>
-    <h1>Detailer Studio</h1>
-    <p>Profesionalni auto detailing - Varvarin</p>
+  <header class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h2>Profesionalni auto detailing</h2>
+      <p>Vaš automobil, naš zadatak</p>
+      <a href="#kontakt" class="btn">Zakaži termin</a>
+    </div>
   </header>
 
-  <section>
-    <h2>O nama</h2>
-    <p>
-      Dobrodošli u <strong>Detailer Studio</strong> – mesto gde vaš automobil dobija vrhunski tretman!
-      Nudimo kompletne detailing usluge: pranje, poliranje, zaštita laka, čišćenje enterijera i još mnogo toga.
-    </p>
-  </section>
-
-  <section>
-    <h2>Usluge</h2>
-    <ul>
-      <li>Detaljno spoljašnje pranje</li>
-      <li>Poliranje i zaštita laka (ceramika i vosak)</li>
-      <li>Dubinsko čišćenje enterijera</li>
-      <li>Pranje motora</li>
-      <li>Uklanjanje mirisa i ozoniranje</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Galerija</h2>
-    <div class="gallery">
-      <img src="images/example1.jpg" alt="Auto 1" />
-      <img src="images/example2.jpg" alt="Auto 2" />
-      <img src="images/example3.jpg" alt="Auto 3" />
+  <section id="usluge" class="services">
+    <h2 class="section-title" data-aos="fade-right">Naše Usluge</h2>
+    <div class="service-grid">
+      <div class="service-card" data-aos="zoom-in">
+        <h3>Spoljašnje pranje</h3>
+        <p>Detaljno ručno pranje i sušenje vozila.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in">
+        <h3>Poliranje laka</h3>
+        <p>Višestepeno poliranje za maksimalan sjaj.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in">
+        <h3>Dubinsko čišćenje</h3>
+        <p>Temeljna nega unutrašnjosti vozila.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in">
+        <h3>Keramička zaštita</h3>
+        <p>Dugotrajna zaštita laka i sjajna završnica.</p>
+      </div>
     </div>
   </section>
 
-  <section class="contact">
-    <h2>Kontakt</h2>
-    <p><strong>Lokacija:</strong> Varvarin</p>
-    <p><strong>Telefon:</strong> <a href="tel:+381628165494">062/8165-494</a></p>
+  <section id="galerija" class="gallery">
+    <h2 class="section-title" data-aos="fade-left">Galerija</h2>
+    <div class="gallery-grid">
+      <img src="images/example1.jpg" alt="Detalj 1" data-aos="fade-up" />
+      <img src="images/example2.jpg" alt="Detalj 2" data-aos="fade-up" />
+      <img src="images/example3.jpg" alt="Detalj 3" data-aos="fade-up" />
+    </div>
   </section>
 
-  <footer>
-    &copy; 2025 Detailer Studio. Sva prava zadržana.
+  <section id="kontakt" class="contact-section">
+    <h2 class="section-title" data-aos="fade-up">Kontakt</h2>
+    <div class="contact-info" data-aos="fade-up">
+      <p><strong>Telefon:</strong> <a href="tel:+381628165494">062/8165-494</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/_detailerr_" target="_blank"><i class="fab fa-instagram"></i> @_detailerr_</a></p>
+      <p><strong>Adresa:</strong> Železnička 374, Ćićevac</p>
+    </div>
+    <div class="map" data-aos="zoom-in">
+      <iframe src="https://www.google.com/maps?q=Železnička 374, Ćićevac, Serbia&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <form class="contact-form" data-aos="fade-up">
+      <input type="text" placeholder="Vaše ime" required />
+      <input type="email" placeholder="Vaš email" required />
+      <textarea rows="5" placeholder="Poruka" required></textarea>
+      <button type="submit">Pošalji</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Detailer Studio. Sva prava zadržana.</p>
   </footer>
 
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
