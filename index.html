@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detailer Studio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -21,9 +21,11 @@
 
     <!-- Hero Sekcija -->
     <header class="hero">
-        <h1>Dobrodošli u Detailer Studio</h1>
-        <p>Vaš partner za vrhunski detailing automobila.</p>
-        <a href="#kontakt" class="cta-button">Kontaktirajte nas</a>
+        <div class="hero-content">
+            <h1>Detailer Studio</h1>
+            <p>Osvježite izgled vašeg automobila uz vrhunski detailing.</p>
+            <a href="#kontakt" class="cta-button">Kontaktirajte nas</a>
+        </div>
     </header>
 
     <!-- Usluge -->
@@ -31,14 +33,23 @@
         <h2 class="section-title">Naše Usluge</h2>
         <div class="usluge-cards">
             <div class="usluga-card">
+                <div class="usluga-icon">
+                    <img src="images/spoljasnjost-icon.png" alt="Spoljašnjost" />
+                </div>
                 <h3>Čišćenje spoljašnjosti</h3>
-                <p>Detajlno čišćenje spoljašnjosti vozila sa vrhunskim proizvodima.</p>
+                <p>Detaljno čišćenje spoljašnjosti vozila sa vrhunskim proizvodima.</p>
             </div>
             <div class="usluga-card">
+                <div class="usluga-icon">
+                    <img src="images/poliranje-icon.png" alt="Poliranje" />
+                </div>
                 <h3>Poliranje</h3>
                 <p>Poliranje i zaštita boje vašeg vozila za dugotrajan efekat.</p>
             </div>
             <div class="usluga-card">
+                <div class="usluga-icon">
+                    <img src="images/unutrasnjost-icon.png" alt="Unutrašnjost" />
+                </div>
                 <h3>Dubinsko čišćenje unutrašnjosti</h3>
                 <p>Potpuno čišćenje i osvežavanje unutrašnjosti vašeg automobila.</p>
             </div>
@@ -49,9 +60,15 @@
     <section id="galerija" class="gallery">
         <h2 class="section-title">Galerija</h2>
         <div class="gallery-grid">
-            <img src="images/example1.jpg" alt="Detalj 1">
-            <img src="images/example2.jpg" alt="Detalj 2">
-            <img src="images/example3.jpg" alt="Detalj 3">
+            <div class="gallery-item">
+                <img src="images/example1.jpg" alt="Detalj 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/example2.jpg" alt="Detalj 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/example3.jpg" alt="Detalj 3">
+            </div>
         </div>
     </section>
 
