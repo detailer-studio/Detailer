@@ -8,6 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #fff;
+    overflow-x: hidden; /* Sprečava horizontalni scroll */
 }
 
 /* Navigacija */
@@ -20,6 +21,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    animation: slideInNav 1s ease-out;
 }
 
 .navbar .logo {
@@ -48,18 +50,30 @@ body {
     color: #ff5e5e;
 }
 
+/* Animacija za navigaciju */
+@keyframes slideInNav {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 /* Hero sekcija */
 .hero {
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 100px 20px;
+    animation: fadeIn 2s ease-out;
 }
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 50px 20px;
     border-radius: 10px;
+    animation: fadeInContent 2s ease-out;
 }
 
 .hero h1 {
@@ -86,11 +100,34 @@ body {
     background-color: #ff0000;
 }
 
+/* Animacija za hero */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animacija za hero content */
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Sekcija usluga */
 .usluge {
     text-align: center;
     padding: 50px 0;
     background-color: #f8f8f8;
+    animation: fadeInSection 2s ease-out;
 }
 
 .usluge .usluge-cards {
@@ -107,6 +144,8 @@ body {
     width: 30%;
     transition: transform 0.3s;
     text-align: center;
+    opacity: 0;
+    animation: fadeInCard 2s ease-out forwards;
 }
 
 .usluga-card:hover {
@@ -123,10 +162,32 @@ body {
     margin-bottom: 15px;
 }
 
+/* Animacija za usluge */
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Sekcija galerije */
 .gallery {
     padding: 50px 0;
     text-align: center;
+    animation: fadeInGallery 2s ease-out;
 }
 
 .gallery .gallery-grid {
@@ -147,12 +208,23 @@ body {
     transform: scale(1.05);
 }
 
+/* Animacija za galeriju */
+@keyframes fadeInGallery {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Sekcija kontakt */
 .kontakt {
     padding: 50px 0;
     background-color: #d32f2f;
     text-align: center;
     color: white;
+    animation: fadeInSection 2s ease-out;
 }
 
 .kontakt form input,
