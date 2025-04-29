@@ -1,90 +1,73 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detailer Studio | Auto Detailing Varvarin</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a2e0e6cfd4.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailer Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <h1 class="logo">Detailer Studio</h1>
-      <ul class="nav-links">
-        <li><a href="#usluge">Usluge</a></li>
-        <li><a href="#galerija">Galerija</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <header class="hero" data-aos="fade-up">
-    <div class="hero-content">
-      <h2>Profesionalni auto detailing</h2>
-      <p>Vaš automobil, naš zadatak</p>
-      <a href="#kontakt" class="btn">Zakaži termin</a>
-    </div>
-  </header>
+    <!-- Navigacija -->
+    <nav class="navbar">
+        <div class="logo">Detailer Studio</div>
+        <ul class="nav-links">
+            <li><a href="#usluge">Usluge</a></li>
+            <li><a href="#galerija">Galerija</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
 
-  <section id="usluge" class="services">
-    <h2 class="section-title" data-aos="fade-right">Naše Usluge</h2>
-    <div class="service-grid">
-      <div class="service-card" data-aos="zoom-in">
-        <h3>Spoljašnje pranje</h3>
-        <p>Detaljno ručno pranje i sušenje vozila.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in">
-        <h3>Poliranje laka</h3>
-        <p>Višestepeno poliranje za maksimalan sjaj.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in">
-        <h3>Dubinsko čišćenje</h3>
-        <p>Temeljna nega unutrašnjosti vozila.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in">
-        <h3>Keramička zaštita</h3>
-        <p>Dugotrajna zaštita laka i sjajna završnica.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Sekcija -->
+    <header class="hero">
+        <h1>Dobrodošli u Detailer Studio</h1>
+        <p>Vaš partner za vrhunski detailing automobila.</p>
+        <a href="#kontakt" class="cta-button">Kontaktirajte nas</a>
+    </header>
 
-  <section id="galerija" class="gallery">
-    <h2 class="section-title" data-aos="fade-left">Galerija</h2>
-    <div class="gallery-grid">
-      <img src="images/example1.jpg" alt="Detalj 1" data-aos="fade-up" />
-      <img src="images/example2.jpg" alt="Detalj 2" data-aos="fade-up" />
-      <img src="images/example3.jpg" alt="Detalj 3" data-aos="fade-up" />
-    </div>
-  </section>
+    <!-- Usluge -->
+    <section id="usluge" class="usluge">
+        <h2 class="section-title">Naše Usluge</h2>
+        <div class="usluge-cards">
+            <div class="usluga-card">
+                <h3>Čišćenje spoljašnjosti</h3>
+                <p>Detajlno čišćenje spoljašnjosti vozila sa vrhunskim proizvodima.</p>
+            </div>
+            <div class="usluga-card">
+                <h3>Poliranje</h3>
+                <p>Poliranje i zaštita boje vašeg vozila za dugotrajan efekat.</p>
+            </div>
+            <div class="usluga-card">
+                <h3>Dubinsko čišćenje unutrašnjosti</h3>
+                <p>Potpuno čišćenje i osvežavanje unutrašnjosti vašeg automobila.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="kontakt" class="contact-section">
-    <h2 class="section-title" data-aos="fade-up">Kontakt</h2>
-    <div class="contact-info" data-aos="fade-up">
-      <p><strong>Telefon:</strong> <a href="tel:+381628165494">062/8165-494</a></p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/_detailerr_" target="_blank"><i class="fab fa-instagram"></i> @_detailerr_</a></p>
-      <p><strong>Adresa:</strong> Železnička 374, Ćićevac</p>
-    </div>
-    <div class="map" data-aos="zoom-in">
-      <iframe src="https://www.google.com/maps?q=Železnička 374, Ćićevac, Serbia&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <form class="contact-form" data-aos="fade-up">
-      <input type="text" placeholder="Vaše ime" required />
-      <input type="email" placeholder="Vaš email" required />
-      <textarea rows="5" placeholder="Poruka" required></textarea>
-      <button type="submit">Pošalji</button>
-    </form>
-  </section>
+    <!-- Galerija -->
+    <section id="galerija" class="gallery">
+        <h2 class="section-title">Galerija</h2>
+        <div class="gallery-grid">
+            <img src="images/example1.jpg" alt="Detalj 1">
+            <img src="images/example2.jpg" alt="Detalj 2">
+            <img src="images/example3.jpg" alt="Detalj 3">
+        </div>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Detailer Studio. Sva prava zadržana.</p>
-  </footer>
+    <!-- Kontakt -->
+    <section id="kontakt" class="kontakt">
+        <h2 class="section-title">Kontaktirajte nas</h2>
+        <form action="#">
+            <input type="text" name="ime" placeholder="Vaše ime" required>
+            <input type="email" name="email" placeholder="Vaš email" required>
+            <textarea name="poruka" placeholder="Vaša poruka" required></textarea>
+            <button type="submit">Pošaljite</button>
+        </form>
+        <div class="social">
+            <a href="https://www.instagram.com/_detailerr_" class="instagram-icon">Instagram</a>
+        </div>
+    </section>
 
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
