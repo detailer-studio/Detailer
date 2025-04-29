@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
 }
 
 /* Navigacija */
@@ -24,7 +24,7 @@ body {
 
 .navbar .logo {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -40,25 +40,31 @@ body {
 .navbar .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-    color: #f5f5f5;
+    color: #ff5e5e;
 }
 
 /* Hero sekcija */
 .hero {
-    background: linear-gradient(to bottom, #ffffff, #ff0000);
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
     text-align: center;
-    padding: 100px 0;
-    color: black;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 20px;
+    border-radius: 10px;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -67,7 +73,7 @@ body {
 }
 
 .hero .cta-button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     background-color: black;
     color: white;
     text-decoration: none;
@@ -77,14 +83,14 @@ body {
 }
 
 .hero .cta-button:hover {
-    background-color: #d32f2f;
+    background-color: #ff0000;
 }
 
 /* Sekcija usluga */
 .usluge {
     text-align: center;
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
 }
 
 .usluge .usluge-cards {
@@ -95,11 +101,12 @@ body {
 
 .usluga-card {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 30%;
     transition: transform 0.3s;
+    text-align: center;
 }
 
 .usluga-card:hover {
@@ -109,6 +116,11 @@ body {
 .usluga-card h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+}
+
+.usluga-icon img {
+    width: 80px;
+    margin-bottom: 15px;
 }
 
 /* Sekcija galerije */
@@ -123,21 +135,23 @@ body {
     gap: 20px;
 }
 
-.gallery img {
+.gallery-item img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s;
 }
 
-.gallery img:hover {
-    transform: scale(1.1);
+.gallery-item img:hover {
+    transform: scale(1.05);
 }
 
 /* Sekcija kontakt */
 .kontakt {
     padding: 50px 0;
-    text-align: center;
     background-color: #d32f2f;
+    text-align: center;
     color: white;
 }
 
@@ -170,7 +184,7 @@ body {
 
 .social .instagram-icon {
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     font-size: 1.2rem;
 }
