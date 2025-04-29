@@ -1,168 +1,176 @@
+/* Generalni stilovi */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #ffffff 0%, #ff0000 100%);
-  color: #000;
-  line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
 }
 
-a {
-  text-decoration: none;
-  color: #cc0000;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
+/* Navigacija */
 .navbar {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d32f2f;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .navbar .logo {
-  font-weight: 700;
-  font-size: 24px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
 }
 
-.navbar .nav-links li a {
-  color: white;
-  font-weight: 500;
+.navbar .nav-links li {
+    margin-left: 30px;
 }
 
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #f5f5f5;
+}
+
+/* Hero sekcija */
 .hero {
-  background: url('images/example1.jpg') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
+    background: linear-gradient(to bottom, #ffffff, #ff0000);
+    text-align: center;
+    padding: 100px 0;
+    color: black;
 }
 
-.hero::after {
-  content: '';
-  background-color: rgba(0,0,0,0.5);
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h2 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-.btn {
-  background: #cc0000;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: 600;
-  margin-top: 20px;
-  display: inline-block;
-  transition: 0.3s ease;
+.hero .cta-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background: #a80000;
+.hero .cta-button:hover {
+    background-color: #d32f2f;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  margin: 50px 0 30px;
+/* Sekcija usluga */
+.usluge {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-.services, .gallery, .contact-section {
-  padding: 40px 20px;
+.usluge .usluge-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
 }
 
-.service-grid, .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+.usluga-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s;
 }
 
-.service-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.usluga-card:hover {
+    transform: translateY(-10px);
 }
 
-.gallery-grid img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.usluga-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.contact-info p {
-  margin: 10px 0;
+/* Sekcija galerije */
+.gallery {
+    padding: 50px 0;
+    text-align: center;
 }
 
-.contact-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-.contact-form button {
-  background-color: #cc0000;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
+.gallery img:hover {
+    transform: scale(1.1);
 }
 
-.contact-form button:hover {
-  background-color: #a80000;
+/* Sekcija kontakt */
+.kontakt {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #d32f2f;
+    color: white;
 }
 
-.map {
-  margin: 20px 0;
+.kontakt form input,
+.kontakt form textarea {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
 }
 
-.footer {
-  background-color: #000;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.kontakt form button {
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.kontakt form button:hover {
+    background-color: #ff0000;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social .instagram-icon {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
