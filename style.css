@@ -113,3 +113,81 @@ a { text-decoration: none; color: inherit; }
 .kontakt .info {
     margin-top: 30px;
 }
+
+.mobile-nav {
+  background: #111;
+  color: white;
+  padding: 15px;
+  position: relative;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  background: #222;
+  border-radius: 0 0 10px 10px;
+}
+
+.nav-links.open {
+  max-height: 500px;
+}
+
+.nav-links li {
+  border-top: 1px solid #333;
+}
+
+.nav-links li:first-child {
+  border-top: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  background: red;
+  transform: translateX(5px);
+}
+
+@media (min-width: 768px) {
+  .mobile-nav .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    max-height: none !important;
+    flex-direction: row;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .nav-links li {
+    border: none;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
+  }
+
+  .nav-links a:hover {
+    background: red;
+    transform: none;
+  }
+}
