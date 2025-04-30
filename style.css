@@ -16,7 +16,13 @@ a { text-decoration: none; color: inherit; }
     align-items: center;
     color: white;
 }
+.nav-links li a {
+    transition: transform 0.2s ease-in-out;
+}
 
+.nav-links li a:hover {
+    transform: scale(1.1);
+}
 .navbar ul {
     list-style: none;
     display: flex;
