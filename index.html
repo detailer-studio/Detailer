@@ -28,7 +28,7 @@
         <div class="hero-content" data-aos="fade-up">
             <h1>Dobrodošli u Detailer Studio</h1>
             <p>Vrhunski detailing i poliranje vozila u Varvarinu</p>
-            <a href="#kontakt" class="cta-button">Zakaži odmah</a>
+            <a href="#kontakt" class="cta-button"><strong>Zakaži klikom</strong></a>
         </div>
     </section>
 
@@ -98,12 +98,19 @@
 
     <section id="kontakt" class="section kontakt">
         <h2 data-aos="fade-up">Kontakt</h2>
-        <form data-aos="zoom-in">
-            <input type="text" placeholder="Ime" required />
-            <input type="email" placeholder="Email" required />
-            <textarea placeholder="Poruka" required></textarea>
-            <button type="submit">Pošalji</button>
-        </form>
+<form action="https://formsubmit.co/detailerbrush@gmail.com" method="POST" data-aos="zoom-in">
+    <input type="text" name="name" placeholder="Ime i prezime" required />
+    <input type="email" name="email" placeholder="Email adresa" required />
+    
+    
+    <textarea name="message" placeholder="Poruka" required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_autoresponse" value="Hvala na poruci! Javićemo vam se uskoro.">
+
+    <button type="submit">Pošalji</button>
+</form>
         <div class="info" data-aos="fade-up">
             <p><i class="fa fa-phone"></i> 062/8165-494</p>
             <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/_detailerr_" target="_blank">@_detailerr_</a></p>
