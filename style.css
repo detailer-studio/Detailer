@@ -4,6 +4,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: white;
     color: black;
+    overflow-x: hidden;
 }
 
 .nav-links li a {
