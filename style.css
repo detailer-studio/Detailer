@@ -3,12 +3,38 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  background: red;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
 .menu-toggle {
   font-size: 1.8rem;
   cursor: pointer;
   color: white;
-  z-index: 1100;
-  display: block;
+  display: none;
 }
 
 .sidebar {
@@ -22,7 +48,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding-top: 100px;
   transition: right 0.3s ease;
   z-index: 1000;
@@ -37,28 +63,39 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  text-align: center;
 }
 
 .sidebar .nav-links li {
-  width: 100%;
+  margin: 20px 0;
 }
 
 .sidebar .nav-links a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 15px 20px;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
+}
+
+.nav-links li a:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
 
 @media (min-width: 769px) {
   .sidebar {
-    display: none;
+    display: none !important;
   }
 
-  .navbar ul.nav-links {
+  .nav-links {
     display: flex;
     gap: 20px;
   }
@@ -67,140 +104,90 @@
     display: none;
   }
 }
-}
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: white;
-    color: black;
-    overflow-x: hidden;
-}
-
-.nav-links li a {
-    transition: transform 0.2s ease-in-out;
-}
-
-.nav-links li a:hover {
-    transform: scale(1.1);
-}
-
-a { text-decoration: none; color: inherit; }
-
-.navbar {
-    background: red;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-
-img, .container {
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-}
-
-.navbar li a {
-    color: white;
-}
 
 .hero {
-    background: url('images/pozadina.jpg') center/cover no-repeat;  
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;  
-    background-color: black;
+  background: url('images/pozadina.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: black;
 }
 
 .cta-button {
-    background: red;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
-    display: inline-block;
-    border-radius: 5px;
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
 }
 
 .section {
-    padding: 60px 20px;
-    text-align: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .services, .pricing {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .service, .price-card {
-    background: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    width: 280px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .service img, .gallery img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .gallery {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .reviews blockquote {
-    font-style: italic;
-    margin: 10px auto;
-    max-width: 600px;
-    padding: 20px;
-    background: #f1f1f1;
-    border-left: 5px solid red;
+  font-style: italic;
+  margin: 10px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-left: 5px solid red;
 }
 
 .kontakt form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .kontakt input, .kontakt textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .kontakt button {
-    background: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+  background: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 .kontakt .info {
-    margin-top: 30px;
-}
-@media (min-width: 769px) {
-    .sidebar {
-        display: none;
-    }
-
-    .navbar ul.nav-links {
-            display: flex !important;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
+  margin-top: 30px;
 }
