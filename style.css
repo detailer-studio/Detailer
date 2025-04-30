@@ -28,7 +28,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero {
-    background: url('images/pozadina1.png') center/cover no-repeat;  
+    background: url('images/pozadina.png') center/cover no-repeat;  
     height: 100vh; 
     display: flex;
     align-items: center;
