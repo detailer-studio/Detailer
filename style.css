@@ -4,7 +4,7 @@
   padding: 0;
 }
 .menu-toggle {
-    display: none;
+    
     font-size: 1.8rem;
     cursor: pointer;
     color: white;
@@ -27,7 +27,7 @@
     z-index: 1000;
 }
 .sidebar {
-  display: none;
+  display: 
   position: absolute;
   top: 60px; 
   left: 0;
