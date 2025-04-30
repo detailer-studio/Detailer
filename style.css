@@ -89,12 +89,6 @@ img, .container {
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .navbar li a {
     color: white;
 }
@@ -191,3 +185,10 @@ img, .container {
     }
 
     .navbar ul.nav-links {
+            display: flex !important;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
