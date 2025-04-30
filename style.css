@@ -125,10 +125,10 @@ a { text-decoration: none; color: inherit; }
 
 .nav-links {
   list-style: none;
-  padding: 0;
+  padding-top: 100px
   margin: 0;
   position: fixed;
-  top: 0;
+  top: 60px;
   right: -250px;
   width: 250px
   height: 100%
@@ -144,20 +144,18 @@ a { text-decoration: none; color: inherit; }
   right: 0;
 }
 
-.nav-links li {
-  border-top: 1px solid #333;
+.nav-links.open {
+  right: 0;
 }
 
 .nav-links li {
-  border-bottom: 1px solid #333;
+  margin: 20px 0;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  padding: 15px;
-  display: block;
-  transition: background 0.3s;
+  font-size: 18px;
 }
 
 .nav-links a:hover {
