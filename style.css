@@ -3,6 +3,60 @@
   margin: 0;
   padding: 0;
 }
+/* Sidebar meni */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 100px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+}
+
+.sidebar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
