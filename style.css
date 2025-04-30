@@ -49,7 +49,7 @@
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; !important;
+        display: none !important;
     }
 
     .menu-toggle {
@@ -93,11 +93,6 @@ img, .container {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
 }
 
 .navbar li a {
@@ -190,3 +185,9 @@ img, .container {
 .kontakt .info {
     margin-top: 30px;
 }
+@media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+
+    .navbar ul.nav-links {
