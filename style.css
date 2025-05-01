@@ -1,9 +1,15 @@
 
 body {
     margin: 0;
-    font-family: 'Vivaldi', sans-serif;
+    font-family: sans-serif;
     background: white;
     color: black;
+}
+
+.logo {
+    font-family: 'Playwrite AU SA', sans-serif;
+    font-size: 24px; 
+    font-weight: 400; 
 }
 
 a { text-decoration: none; color: inherit; }
