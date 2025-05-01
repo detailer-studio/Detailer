@@ -146,6 +146,8 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   opacity: 1;
   pointer-events: auto;
+  position: absolute;
+  left: 0;
 }
 
 .nav-links li a {
