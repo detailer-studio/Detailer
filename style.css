@@ -129,19 +129,23 @@ a { text-decoration: none; color: inherit; }
   left: 0;
   width: 100%
   display: none;
-  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  transition: opacity 0.3s ease;
   background-color: #222;
   justify-content: start;
   align-items: center;
   flex-direction: coloumn;
   gap: 20px
   overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nav-links.open {
   max-height: 300px;
   padding: 20px 0;
   display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-links li a {
