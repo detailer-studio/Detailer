@@ -142,12 +142,12 @@ a { text-decoration: none; color: inherit; }
 
 .nav-links.open {
   max-height: 300px;
-  padding: 20px 0;
+  padding: 20px;
   display: flex;
   opacity: 1;
   pointer-events: auto;
   position: absolute;
-  left: 0;
+  left: -50%;
 }
 
 .nav-links li a {
