@@ -146,7 +146,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   opacity: 1;
   pointer-events: auto;
-  right: 50px;
+  right: 40px;
 }
 
 .nav-links li a {
