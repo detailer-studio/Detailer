@@ -152,7 +152,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   opacity: 1;
   pointer-events: auto;
-  right: -20px;
+  right: -30px;
 }
 
 .nav-links li a {
