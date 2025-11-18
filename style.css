@@ -16,7 +16,7 @@ body {
 a { text-decoration: none; color: inherit; }
 
 .navbar {
-    background: red;
+    background: black;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -46,12 +46,13 @@ a { text-decoration: none; color: inherit; }
 }
 
 .cta-button {
-    background: red;
+    background: black;
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
     display: inline-block;
     border-radius: 5px;
+    border: 2px solid #B8860B
 }
 
 .section {
@@ -67,7 +68,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .service, .price-card {
-    background: #f8f8f8;
+    background-colour: #1A1A1A
     padding: 20px;
     border-radius: 10px;
     width: 280px;
