@@ -105,7 +105,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .kontakt button {
-    background: red;
+    background: #B8860B
     color: white;
     padding: 10px;
     border: none;
@@ -165,7 +165,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .nav-links a:hover {
-  background-color: red;
+  background-color: #B8860B
 }
 
 @media (min-width: 768px) {
