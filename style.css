@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background: radial-gradient(circle at center, #111111 0%, #000000 100%); url('images/IMG_2014.jpeg') repeat;
-    color: #FFFFFF;
+background: url('images/IMG_2014.jpeg') repeat;
+    
 }
 
 .logo {
