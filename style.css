@@ -35,7 +35,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero {
-    background: url('All in .jpg.PNG') center/cover no-repeat;  
+    background: url('images/All in .jpg.PNG') center/cover no-repeat;  
     height: 100vh; 
     display: flex;
     align-items: center;
