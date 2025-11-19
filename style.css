@@ -48,7 +48,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .cta-button {
-    background: black;
+    background: url('images/IMG_2014.JPEG') repeat;
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
