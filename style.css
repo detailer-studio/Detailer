@@ -86,10 +86,18 @@ a { text-decoration: none; color: inherit; }
     margin: 10px auto;
     max-width: 600px;
     padding: 20px;
-    background: #f1f1f1;
-    border-left: 5px solid red;
+    background: #000000;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    color: #B8860B;
+    border-left: none;
 }
 
+#recenzije h2 {
+    color: #B8860B;
+    
+    }
+    
 .kontakt form {
     display: flex;
     flex-direction: column;
@@ -190,4 +198,41 @@ a { text-decoration: none; color: inherit; }
     padding: 10px 15px;
   
   }
+
+/* Stil za sekciju 'Ostavi recenziju' */
+.review-cta {
+    background-color: #000000; /* Crna pozadina */
+    color: #FFFFFF; /* Beli tekst */
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.review-cta h2 {
+    /* IZMENA: 'Ostavi recenziju' je crna sa zlatnim okvirom, slova bela */
+    color: #FFFFFF; /* Beli tekst */
+    background-color: #000000;
+    border: 2px solid #B8860B; /* Tamno zlatni okvir */
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+
+/* Stil za dugme "Klikni ovde" */
+.review-button {
+    /* IZMENA: Dugme 'Klikni ovde' - Crna pozadina, bela slova, zlatni okvir */
+    background-color: #000000 !important; /* Crna pozadina */
+    color: #FFFFFF !important; /* Beli tekst */
+    border: 2px solid #B8860B; /* Tamno zlatni okvir */
+    padding: 12px 24px;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold;
+    display: inline-block;
+}
+
+.review-button:hover {
+    background-color: #B8860B !important; /* Zlatna pozadina na hover */
+    color: #000000 !important;
+}
+
 }
