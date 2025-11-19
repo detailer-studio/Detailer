@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background: #000000 url('images/black_texture.jpg') repeat;
+    background: radial-gradient(circle at center, #111111 0%, #000000 100%); url('images/black_texture.jpg') repeat;
     color: #FFFFFF;
 }
 
