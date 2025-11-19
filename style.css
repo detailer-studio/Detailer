@@ -62,6 +62,14 @@ a { text-decoration: none; color: inherit; }
     text-align: center;
     color: #FFFFFF;
 }
+/* Pravilo koje omogućava centriranje Dodatnih Usluga */
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Omogućava da se vidžeti prebacuju u novi red na manjim ekranima */
+    justify-content: center; /* CENTRIRA VIDŽETE HORIZONTALNO */
+    gap: 20px; /* Dodaje razmak između vidžeta */
+}
+
 
 .services, .pricing {
     display: flex;
