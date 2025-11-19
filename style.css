@@ -60,6 +60,7 @@ a { text-decoration: none; color: inherit; }
 .section {
     padding: 60px 20px;
     text-align: center;
+    color: #FFFFFF;
 }
 
 .services, .pricing {
@@ -116,10 +117,10 @@ a { text-decoration: none; color: inherit; }
 }
 
 .kontakt button {
-    background: #B8860B
+    background: #B8860B;
     color: white;
     padding: 10px;
-    border: none;
+    border: #B8860B;
     border-radius: 5px;
 }
 
