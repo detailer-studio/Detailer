@@ -246,5 +246,17 @@ a { text-decoration: none; color: inherit; }
     background-color: #B8860B !important; /* Zlatna pozadina na hover */
     color: #000000 !important;
 }
+.paket ul {
+    list-style-type: none; /* Uklanja tačkice */
+    padding: 0;            /* Uklanja prazan prostor sa leve strane */
+    margin: 0;             /* Uklanja spoljašnje margine */
+    text-align: left;      /* Poravnava tekst uz levu ivicu */
+}
+
+.paket li {
+    display: flex;         /* Omogućava da kvačica i tekst budu u ravni */
+    align-items: center;   /* Centrira kvačicu vertikalno u odnosu na tekst */
+    margin-bottom: 8px;    /* Dodaje mali razmak između stavki */
+}
 
 }
