@@ -291,37 +291,58 @@ ul, li {
     background: rgba(0,0,0,0.5); /* Malo tamnija pozadina da se vidi tekst */
 }
 
-/* Naslov paketa */
-.paket-naslov {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #FFD700;
-    margin-bottom: 15px;
-    text-align: left !important;
+/* Popravka za karticu paketa */
+.price-card {
+    background-color: #1A1A1A; /* Popravljeno 'colour' */
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    border: 2px solid #B8860B;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Kartica stoji u centru */
 }
 
-/* Kontejner za stavke */
-.lista-redova {
-    display: block !important;
-    text-align: left !important;
+.price-card h3 {
+    color: #B8860B;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Svaki pojedinačni red */
-.red {
-    display: block !important;
-    text-align: left !important; /* FORSIRA LEVO */
-    margin-bottom: 8px !important;
-    width: 100% !important;
-    clear: both;
+/* Kontejner koji drži stavke - On gura tekst ulevo */
+.lista-stavki {
+    width: 100%; /* Širi se skroz do ivica kartice */
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* OVO gura tekst uz levu ivicu */
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* Cena na kraju */
-.paket-cena {
-    margin-top: 15px;
+.red-stavka {
+    display: block;
+    width: 100%;
     text-align: left !important;
+    font-size: 15px;
+    color: white;
+}
+
+/* Cena i trajanje - ostaju u sredini radi balansa */
+.cena-info {
+    text-align: center;
     border-top: 1px solid #444;
-    padding-top: 10px;
+    width: 100%;
+    padding-top: 15px;
 }
+
+.cena-info strong {
+    font-size: 22px;
+    color: #B8860B;
+    display: block;
+    margin-top: 5px;
+}
+
 
 }
 
