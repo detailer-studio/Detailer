@@ -246,16 +246,23 @@ a { text-decoration: none; color: inherit; }
     background-color: #B8860B !important; /* Zlatna pozadina na hover */
     color: #000000 !important;
 }
-.paket ul {
-    list-style-type: none !important;/* Uklanja tačkice */
-    padding-left !important;            /* Uklanja prazan prostor sa leve strane */
-    margin-left   !important;           /* Uklanja spoljašnje margine */
-    text-align: left   !important;
+/* Briše standardne tačkice */
+ul, li {
+    list-style: none !important;
+    list-style-image: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
 
-.paket li {
-    display: flex;         /* Omogućava da kvačica i tekst budu u ravni */
-    align-items: center;   /* Centrira kvačicu vertikalno u odnosu na tekst */
-    margin-bottom: 8px;    /* Dodaje mali razmak između stavki */
+/* Briše "lažne" tačkice ako su napravljene preko koda */
+li::before {
+    content: "" !important;
+    display: none !important;
+}
+
+/* Poravnava sve uz levu ivicu */
+.paket, .paket * {
+    text-align: left !important;
 }
 
 }
