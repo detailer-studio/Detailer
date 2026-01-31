@@ -254,15 +254,36 @@ ul, li {
     margin-left: 0 !important;
 }
 
-/* Briše "lažne" tačkice ako su napravljene preko koda */
-li::before {
-    content: "" !important;
-    display: none !important;
+/* Glavni kontejner paketa */
+.standard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ovo gura sve sadržaje ulevo */
+    padding: 20px;
+    border: 2px solid #FFD700; /* Žuti okvir sa slike */
+    border-radius: 10px;
 }
 
-/* Poravnava sve uz levu ivicu */
-.paket, .paket * {
+/* Sređivanje liste */
+.standard ul {
+    list-style: none !important; /* Ubija tačkice */
+    padding: 0 !important;      /* Lepe tekst uz samu ivicu */
+    margin: 15px 0 !important;
+    width: 100%;
+}
+
+/* Svaka stavka u listi */
+.standard li {
     text-align: left !important;
+    display: block !important;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
+/* Centriranje naslova i cene (opciono) */
+.standard h3, .standard .info {
+    width: 100%;
+    text-align: center; /* Ako želiš da naslov i cena ipak budu u sredini, ostavi ovo */
 }
+
+
