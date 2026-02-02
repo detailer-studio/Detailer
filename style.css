@@ -1,16 +1,15 @@
-
+/* Osnovni stilovi */
 body {
     margin: 0;
     font-family: sans-serif;
-background: url('images/IMG_2014.jpeg');
-    
+    background: url('images/IMG_2014.jpeg');
 }
 
 .logo {
     font-family: "Cal Sans", sans-serif;
     font-size: 24px; 
     font-weight: 400; 
-    color: #B8860B
+    color: #B8860B;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -21,40 +20,37 @@ a { text-decoration: none; color: inherit; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    position: sticky; /* Opciono: da navigacija prati skrolovanje */
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.navbar li a {
-    color: none;
-}
-
+/* Sekcije */
 .hero {
-    background: url('images/All in .jpg.PNG') center/cover no-repeat;  
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/All in .jpg.PNG') center/cover no-repeat;  
     height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;  
-    background-color: black;
-    border: 2px solid #B8860B !important;
-    box-shadow:0 0 8px rgba(184, 134, 11, 0.5);
+    border: 2px solid #B8860B;
+    box-shadow: 0 0 8px rgba(184, 134, 11, 0.5);
 }
 
 .cta-button {
-    background-color: grey;
+    background-color: #333;
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
     display: inline-block;
     border-radius: 5px;
-    border: 2px solid #B8860B
+    border: 2px solid #B8860B;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #B8860B;
 }
 
 .section {
@@ -62,16 +58,9 @@ a { text-decoration: none; color: inherit; }
     text-align: center;
     color: #FFFFFF;
 }
-/* Pravilo koje omogućava centriranje Dodatnih Usluga */
-.services-container {
-    display: flex;
-    flex-wrap: wrap; /* Omogućava da se vidžeti prebacuju u novi red na manjim ekranima */
-    justify-content: center; /* CENTRIRA VIDŽETE HORIZONTALNO */
-    gap: 20px; /* Dodaje razmak između vidžeta */
-}
 
-
-.services, .pricing {
+/* Grids */
+.services, .pricing, .services-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -79,132 +68,109 @@ a { text-decoration: none; color: inherit; }
 }
 
 .service, .price-card {
-    background-colour: #1A1A1A
+    background-color: #1A1A1A; /* Popravljeno */
     padding: 20px;
     border-radius: 10px;
     width: 280px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: 2px solid #B8860B
+    border: 2px solid #B8860B;
 }
 
-.service img, .gallery img {
+.service img {
     width: 100%;
     border-radius: 10px;
 }
 
-.reviews blockquote {
-    font-style: italic;
-    margin: 10px auto;
-    max-width: 600px;
-    padding: 20px;
-    background: #000000;
-    border: 2px solid #FFFFFF !important;
-    border-radius: 5px;
-    color: #B8860B;
-    border-left: none;
-    
+/* Paketi specifično */
+.price-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#recenzije h2 {
-    color: #B8860B;
-    
-    }
-    
-.kontakt form {
+.lista-stavki {
+    width: 100%;
+    text-align: left;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+    margin: 20px 0;
 }
 
-.kontakt input, .kontakt textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.kontakt button {
-    background: #B8860B;
+.red-stavka {
     color: white;
-    padding: 10px;
-    border: #B8860B;
-    border-radius: 5px;
+    font-size: 15px;
 }
 
-.kontakt .info {
-    margin-top: 30px;
+.cena-info {
+    border-top: 1px solid #444;
+    width: 100%;
+    padding-top: 15px;
 }
 
-.mobile-nav {
-  background: #111;
-  padding: 1rem;
-  position: relative;
-  color: white;
+.cena-info strong {
+    font-size: 22px;
+    color: #B8860B;
+    display: block;
 }
 
+/* Mobilna navigacija */
 .menu-toggle {
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
 }
 
 .nav-links {
-  list-style: none;
-  padding: 0;
-  max-height: 0;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 150%
-  display: none;
-  transition: opacity 0.3s ease;
-  background-color: #222;
-  justify-content: start;
-  align-items: center;
-  flex-direction: row;
-  gap: 20px
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #111;
+    display: none; /* Sakriveno po defaultu */
+    flex-direction: column;
+    border: 1px solid #B8860B;
 }
 
-.nav-links.open {
-  max-height: 300px;
-  padding: 20px;
-  display: flex;
-  opacity: 1;
-  pointer-events: auto;
-  right: -30px;
+.nav-links.active {
+    display: flex; /* Prikazuje se kad klikneš (JS toggle) */
 }
 
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+.nav-links li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #222;
 }
 
-.nav-links a:hover {
-  background-color: #B8860B
-}
-
+/* Desktop navigacija */
 @media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
+    .menu-toggle {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+        border: none;
+    }
+    .nav-links li {
+        border: none;
+        padding: 0 15px;
+    }
+}
 
-  .nav-links {
-    position: static;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    background: transparent;
-    flex-direction: row;
-  }
+/* Briše tačkice globalno */
+ul {
+    list-style: none;
+    padding: 0;
+}
 
-  .nav-links li {
-    border: none;
-  }
 
   .nav-links a {
     padding: 10px 15px;
