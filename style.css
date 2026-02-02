@@ -1,316 +1,157 @@
 /* Osnovni stilovi */
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
-    font-family: sans-serif;
-    background: url('images/IMG_2014.jpeg');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.navbar {
+    background: #000;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #B8860B;
 }
 
 .logo {
     font-family: "Cal Sans", sans-serif;
-    font-size: 24px; 
-    font-weight: 400; 
+    font-size: 24px;
     color: #B8860B;
 }
 
-a { text-decoration: none; color: inherit; }
-
-.navbar {
-    background: black;
-    padding: 1rem 2rem;
+/* Navigacija */
+.nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky; /* Opciono: da navigacija prati skrolovanje */
-    top: 0;
-    z-index: 1000;
+    list-style: none;
+    gap: 20px;
 }
 
-/* Sekcije */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: #B8860B; }
+
+.menu-toggle { display: none; color: white; cursor: pointer; }
+
+/* Hero Sekcija */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/All in .jpg.PNG') center/cover no-repeat;  
-    height: 100vh; 
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/All_in_hero.jpg') center/cover no-repeat;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;  
-    border: 2px solid #B8860B;
-    box-shadow: 0 0 8px rgba(184, 134, 11, 0.5);
+    border-bottom: 3px solid #B8860B;
 }
 
 .cta-button {
-    background-color: #333;
+    background: transparent;
     color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
-    display: inline-block;
-    border-radius: 5px;
+    padding: 12px 30px;
     border: 2px solid #B8860B;
+    border-radius: 5px;
     transition: 0.3s;
+    display: inline-block;
+    margin-top: 20px;
 }
 
-.cta-button:hover {
-    background-color: #B8860B;
-}
+.cta-button:hover { background: #B8860B; color: black; }
 
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    color: #FFFFFF;
-}
+/* Kartice i Grids */
+.section { padding: 80px 10%; text-align: center; }
 
-/* Grids */
 .services, .pricing, .services-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .service, .price-card {
-    background-color: #1A1A1A; /* Popravljeno */
+    background: #111;
     padding: 20px;
     border-radius: 10px;
-    width: 280px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: 2px solid #B8860B;
+    width: 320px;
+    border: 1px solid #333;
+    transition: 0.3s;
 }
 
-.service img {
-    width: 100%;
-    border-radius: 10px;
-}
+.price-card { border: 2px solid #B8860B; }
 
-/* Paketi specifično */
-.price-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+.service:hover, .price-card:hover { transform: translateY(-10px); }
 
+.service img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+
+/* Lista unutar paketa */
 .lista-stavki {
-    width: 100%;
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     margin: 20px 0;
+    min-height: 180px;
 }
 
-.red-stavka {
-    color: white;
-    font-size: 15px;
-}
+.red-stavka { margin-bottom: 10px; font-size: 14px; }
 
 .cena-info {
-    border-top: 1px solid #444;
-    width: 100%;
+    border-top: 1px solid #333;
     padding-top: 15px;
 }
 
-.cena-info strong {
-    font-size: 22px;
-    color: #B8860B;
-    display: block;
+.cena-info strong { font-size: 24px; color: #B8860B; }
+
+/* Kontakt Forma */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Mobilna navigacija */
-.menu-toggle {
-    display: block;
-    font-size: 1.5rem;
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    background: #111;
+    border: 1px solid #333;
     color: white;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #B8860B;
+    color: white;
+    border: none;
+    padding: 15px;
     cursor: pointer;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    background-color: #111;
-    display: none; /* Sakriveno po defaultu */
-    flex-direction: column;
-    border: 1px solid #B8860B;
-}
-
-.nav-links.active {
-    display: flex; /* Prikazuje se kad klikneš (JS toggle) */
-}
-
-.nav-links li {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #222;
-}
-
-/* Desktop navigacija */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-    .nav-links {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        width: auto;
-        background: transparent;
-        border: none;
-    }
-    .nav-links li {
-        border: none;
-        padding: 0 15px;
-    }
-}
-
-/* Briše tačkice globalno */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-
-  .nav-links a {
-    padding: 10px 15px;
-  
-  }
-
-/* Stil za sekciju 'Ostavi recenziju' */
-.review-cta {
-    background-color: #000000; /* Crna pozadina */
-    color: #FFFFFF; /* Beli tekst */
-    padding: 40px 20px; 
-    text-align: center;
-}
-
-.review-cta h2 {
-    /* IZMENA: 'Ostavi recenziju' je crna sa zlatnim okvirom, slova bela */
-    color: #FFFFFF; /* Beli tekst */
-    background-color: #000000;
-    border: 2px solid #B8860B; /* Tamno zlatni okvir */
-    display: inline-block;
-    padding: 5px 15px;
-    margin-bottom: 20px;
-}
-
-/* Stil za dugme "Klikni ovde" */
-.review-button {
-    /* IZMENA: Dugme 'Klikni ovde' - Crna pozadina, bela slova, zlatni okvir */
-    background-color: #000000 !important; /* Crna pozadina */
-    color: #FFFFFF !important; /* Beli tekst */
-    border: 2px solid #B8860B; /* Tamno zlatni okvir */
-    padding: 12px 24px;
-    text-decoration: none; 
-    border-radius: 5px; 
     font-weight: bold;
-    display: inline-block;
 }
 
-.review-button:hover {
-    background-color: #B8860B !important; /* Zlatna pozadina na hover */
-    color: #000000 !important;
+/* Responsiveness (Mobilni) */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #000;
+        padding: 20px;
+        border-bottom: 2px solid #B8860B;
+    }
+
+    .nav-links.active { display: flex; }
+    
+    .service, .price-card { width: 100%; }
 }
-/* Briše standardne tačkice */
-ul, li {
-    list-style: none !important;
-    list-style-image: none !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-}
-
-/* Glavni kontejner paketa */
-.standard {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Ovo gura sve sadržaje ulevo */
-    padding: 20px;
-    border: 2px solid #FFD700; /* Žuti okvir sa slike */
-    border-radius: 10px;
-}
-
-/* Sređivanje liste */
-.standard ul {
-    list-style: none !important; /* Ubija tačkice */
-    padding: 0 !important;      /* Lepe tekst uz samu ivicu */
-    margin: 15px 0 !important;
-    width: 100%;
-}
-
-/* Svaka stavka u listi */
-.standard li {
-    text-align: left !important;
-    display: block !important;
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-/* Glavni okvir paketa - on ide ulevo */
-.moj-paket-kontejner {
-    display: block !important;
-    text-align: left !important;
-    border: 2px solid #FFD700;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 20px 0 !important; /* Ovo ga lepi za levu ivicu ekrana */
-    max-width: 350px; /* Možeš podesiti širinu po želji */
-    background: rgba(0,0,0,0.5); /* Malo tamnija pozadina da se vidi tekst */
-}
-
-/* Popravka za karticu paketa */
-.price-card {
-    background-color: #1A1A1A; /* Popravljeno 'colour' */
-    padding: 25px;
-    border-radius: 10px;
-    width: 300px;
-    border: 2px solid #B8860B;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Kartica stoji u centru */
-}
-
-.price-card h3 {
-    color: #B8860B;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Kontejner koji drži stavke - On gura tekst ulevo */
-.lista-stavki {
-    width: 100%; /* Širi se skroz do ivica kartice */
-    text-align: left !important;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* OVO gura tekst uz levu ivicu */
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.red-stavka {
-    display: block;
-    width: 100%;
-    text-align: left !important;
-    font-size: 15px;
-    color: white;
-}
-
-/* Cena i trajanje - ostaju u sredini radi balansa */
-.cena-info {
-    text-align: center;
-    border-top: 1px solid #444;
-    width: 100%;
-    padding-top: 15px;
-}
-
-.cena-info strong {
-    font-size: 22px;
-    color: #B8860B;
-    display: block;
-    margin-top: 5px;
-}
-
-
-}
-
-
-
