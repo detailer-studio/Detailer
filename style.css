@@ -44,15 +44,32 @@ body {
 .menu-toggle { display: none; color: white; cursor: pointer; }
 
 /* Hero Sekcija */
+/* Hero Sekcija sa Parallax efektom */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/All_in_hero.jpg') center/cover no-repeat;
+    /* Putanja mora biti tačna - proveri da li je slika u images folderu */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/All in .jpg.PNG');
+    
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     border-bottom: 3px solid #B8860B;
+
+    /* PARALLAX MAGIJA */
+    background-attachment: fixed; /* Ovo drži sliku fiksiranom dok skroluješ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+/* Dodatak za mobilne telefone (Parallax često ne radi na mobilnim, pa ga isključujemo) */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
 
 .cta-button {
     background: transparent;
